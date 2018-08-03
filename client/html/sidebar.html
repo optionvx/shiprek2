@@ -1,0 +1,25 @@
+<template name="sidebar">
+  <aside class="sidebar-left">
+    <img src="ship22.png" class="icon">
+    <a class="company-logo" href="/comingsoon">Shiprek</a>
+    <div class="sidebar-links">
+      {{#if currentUser}}
+
+      {{else}}
+      {{/if}}
+      <a class="link-blue" href="/profile" id="profile-link"><img src="deadeye1.png" class="icon">Profile</a>
+      <a class="link-blue" href="/dataentry" id="dataentry-link"><img src="deadeyes1.png" class="icon">Enter Data</a>
+      <a class="link-blue" href="/database" id="database-link"><img src="databaseship.png" class="icon">Database</a>
+      <a class="link-blue" href="/collaborate" id="collaborate-link"><img src="collaborate.png" class="icon">Collaborate</a>
+      <a class="link-blue" href="/questions" id="questions-link"><img src="questions.png" class="icon">Questions?</a>
+      <a class="link-blue" href="/search" id="search-link"><img src="search.png" class="icon">Search</a>
+     {{#if currentUser}}
+     <a class="link-blue logout" href="#" id="logout-link"><i class="fa fa-sign-out"></i>Logout
+     </a>
+     {{else}}
+     <a class="" href="/login" id="login-link"><i class="fa fa-sign-n"></i>Login
+     </a>
+     {{/if}}
+    </div>
+  </aside>
+</template>

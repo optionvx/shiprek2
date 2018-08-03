@@ -1,0 +1,53 @@
+<template name = "databaseForm">
+  {{# if currentUser}}
+  <!--Data Form -->
+  <div id="databaseForm-wrap">
+    <center>
+      <form class="data-post">
+        <h2 class="dataForm-heading"> Please enter your data</h2>
+
+        <label for="dwoodspec" class="sr-only">Wood Grain Type</label>
+        <input type="text" name="dwoodspec" id="dwoodspec" class="form-control" placeholder="Wood Species">
+
+        <label for="Dshape" class="sr-only">Deadeye Shape</label>
+        <input type="text" name="Dshape" id="Dshape" class="form-control" placeholder="Deadeye Shape">
+
+        <label for="shipType" class="sr-only">Ship Type (build)</label>
+        <input type="text" name="shipType" id="shipType" class="form-control" placeholder="Ship Type (build)">
+
+        <label for="shipYear" class="sr-only">Ship Year</label>
+        <input type="number" name="shipYear" id="shipYear" class="form-control" placeholder="Ship Year">
+
+        <label for="Tonnage" class="sr-only">Tonnage</label>
+        <input type="number" name="Tonnage" id="Tonnage" class="form-control" placeholder="Tonnage">
+
+        <label for="Dwidth" class="sr-only">Deadeye Width</label>
+        <input type="number" name="Dwidth" id="Dwidth" class="form-control" step=".01" placeholder="Deadeye Width">
+
+        <label for="Ddiameter" class="sr-only">Deadeye Diameter</label>
+        <input type="number" name="Ddiameter" id="Ddiameter" class="form-control" step=".01" placeholder="Deadeye Diameter">
+
+        <label for="Dlength" class="sr-only">Deadeye Length</label>
+        <input type="number" name="Dlength" id="Dlength" class="form-control" step=".01" placeholder="Deadeye Length">
+
+        <label for="Dthickness" class="sr-only">Deadeye Thickness</label>
+        <input type="number" name="Dthickness" id="Dthickness" class="form-control" step=".01" placeholder="Deadeye Thickness">
+
+        <button class="btn btn-lg btn-success btn-block" type="submit">Submit Data</button>
+      </form>
+    </center>
+  </div>
+  <!--End Data Form -->
+    {{else}}
+    <div id="databaseForm-wrap">
+      <center>
+        <form class="data-post">
+          <h2 class="databaseForm-signin-heading"> Please login to post your data!</h2>
+        <a href="/login" class="btn btn-md btn-primary" id="login-redir">Login</a>
+
+        </form>
+      </center>
+    </div>
+    <!--End Data Form -->
+    {{/if}}
+  </template>

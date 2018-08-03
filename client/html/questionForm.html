@@ -1,0 +1,30 @@
+<template name="questionForm">
+  {{#if currentUser}}
+<!--Data Form -->
+<div id="questionForm-wrap">
+  <center>
+    <form class="question-post">
+      <h2 class="questionForm-heading"> Post a Question!</h2>
+      <label for="questionName" class="sr-only">Question Title</label>
+      <input type="text" name="questionName" id="questionName" class="form-control" placeholder="Question Title">
+      <label for="questionPost" class="sr-only"> Question Post</label>
+      <input type="text" name="questionPost" id="questionPost" class="form-control" placeholder="Insert text!">
+
+      <button class="btn btn-lg btn-success btn-block" type="submit">Post Question</button>
+    </form>
+  </center>
+</div>
+<!--End Data Form -->
+  {{else}}
+  <div id="questionForm-wrap">
+    <center>
+      <form class="question-post">
+        <h2 class="questionForm-signin-heading"> Please login to post a question!</h2>
+      <a href="/login" class="btn btn-md btn-primary" id="login-redir">Login</a>
+
+      </form>
+    </center>
+  </div>
+  <!--End Data Form -->
+  {{/if}}
+</template>
