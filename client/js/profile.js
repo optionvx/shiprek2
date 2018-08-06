@@ -23,5 +23,19 @@ Template.profile.helpers({
     } else {
       return Meteor.user().username;
     }
-  }
+    },
+    //End function
+
+  //To display users DeadeyeDatabase data. Eventually, import and export functions should
+  //Probably go into here?
+  //Purpose is to find all data that belongs to the user
+  //If we want to restrict users we can restrict data etc
+
+  userdatabase: function() {
+    var username = Meteor.user().username;
+    var userId = Meteor.userId();
+    var userdatabase = DeadeyeDatabase.find({userId: userId}, {sort: {createdAt: -1}});
+    return userdatabase;
+
+  },
 });

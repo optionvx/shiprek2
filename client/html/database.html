@@ -2,11 +2,6 @@
 
 
 
-{{#each database}}
-  <!--Database -->
-  <div class="container">
-    <table class="table table-hover">
-        <thead>
         <tr>
           <th class="meta">User</th>
           <th class="meta">Posted On</th>
@@ -20,8 +15,8 @@
           <th class="meta">Deadeye Length</th>
           <th class="meta">Deadeye Thickness</th>
         </tr>
-      </thead>
-      <tbody>
+
+      {{#each database}}
         <tr>
           <td class="meta">{{author}}</td>
           <td class="meta">{{date}}</td>
@@ -35,16 +30,12 @@
           <td class="meta">{{Dlength}}</td>
           <td class="meta">{{Dthickness}}</td>
         </tr>
-      </tbody>
-    </table>
-  </div>
 
 
 
 
-<!--End data -->
-
-  {{else}}
+  <!--End Data -->
+{{else}}
   <h1> no data to display </h1>
-  {{/each}}
+{{/each}}
 </template>

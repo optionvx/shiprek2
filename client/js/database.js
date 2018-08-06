@@ -12,5 +12,5 @@ Template.database.helpers({
   database: function() {
     var database = DeadeyeDatabase.find({}, {sort: {createdAt: -1}});
     return database;
-  }
+  },
 });

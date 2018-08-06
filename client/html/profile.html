@@ -1,5 +1,6 @@
 <template name="profile">
   {{#if currentUser}}
+
 <!-- profile starts -->
 <div id="profile-wrap">
   <center>
@@ -13,5 +14,42 @@
 </div>
 
 <!-- End profiles -->
+
+<!--User Data -->
+
+
+        <tr>
+          <th class="meta">User</th>
+          <th class="meta">Posted On</th>
+          <th class="meta">Wood Species</th>
+          <th class="meta">Deadeye Shape</th>
+          <th class="meta">Ship Type</th>
+          <th class="meta">Ship Year</th>
+          <th class="meta">Tonnage</th>
+          <th class="meta">Width</th>
+          <th class="meta">Diameter</th>
+          <th class="meta">Deadeye Length</th>
+          <th class="meta">Deadeye Thickness</th>
+        </tr>
+{{#each userdatabase}}
+        <tr>
+          <td class="meta">{{author}}</td>
+          <td class="meta">{{date}}</td>
+          <td class="meta">{{dwoodspec}}</td>
+          <td class="meta">{{Dshape}}</td>
+          <td class="meta">{{shipType}}</td>
+          <td class="meta">{{shipYear}}</td>
+          <td class="meta">{{Tonnage}}</td>
+          <td class="meta">{{Dwidth}}</td>
+          <td class="meta">{{Ddiameter}}</td>
+          <td class="meta">{{Dlength}}</td>
+          <td class="meta">{{Dthickness}}</td>
+        </tr>
+
+  <!--End Data -->
+  {{else}}
+  <h1>No data to display!</h1>
+  {{/each}}
+
   {{/if}}
 </template>
